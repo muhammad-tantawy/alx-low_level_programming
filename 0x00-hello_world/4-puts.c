@@ -1,6 +1,7 @@
 #include<stdio.h>
 /**
- * printing using puts
+ *main -  printing using puts
+ *Return: return 0
 */
 int main(void)
 {
