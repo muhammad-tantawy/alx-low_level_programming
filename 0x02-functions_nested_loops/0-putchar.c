@@ -1,3 +1,7 @@
+/**
+ * main - This is just a main progrma
+ */
+
 int _putchar(char c);
 
 int main(void)
