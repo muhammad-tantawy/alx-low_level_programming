@@ -8,17 +8,15 @@
 int _putchar(char c);
 
 /**
- * print_alphabet - This is to print letters
+ *main - This ismain func
  * Return:0
 */
-
-void print_alphabet(void)
+int main(void)
 {
-char c = 'a';
-while (c <= 'z')
-{
-_putchar(c);
-c++;
-}
-_putchar('\n');
+/**
+ * print_alphabet - This is to print letters
+ * Return:0
+*/	
+print_alphabet();
+return (0);
 }
