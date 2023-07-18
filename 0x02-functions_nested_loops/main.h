@@ -18,11 +18,11 @@ int _putchar(char c)
 
 void print_alphabet(void)
 {
-char c = 'a';
-while (c <= 'z')
+char d = 'a';
+while (d <= 'z')
 {
-_putchar(c);
-c++;
+_putchar(d);
+d++;
 }
 _putchar('\n');
 }
