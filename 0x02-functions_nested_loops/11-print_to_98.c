@@ -1,48 +1,58 @@
 #include "main.h"
 
-/**
- * print_to_98 - prints all natural numbers from n to 98.
- * @n: the starting number.
- */
 void print_to_98(int n)
 {
-int i;
+int i, digit, is_negative = 0;
+if (n < 0)
+{
+is_negative = 1;
+n = -n;
+}
 if (n <= 98)
 {
 for (i = n; i < 98; i++)
 {
-print_number(i);
+digit = i;
+if (is_negative)
+{
+_putchar('-');
+}
+if (digit >= 10)
+{
+_putchar(digit / 10 + '0');
+digit %= 10;
+}
+_putchar(digit + '0');
+if (i != 97)
+{
 _putchar(',');
 _putchar(' ');
+}
 }
 }
 else
 {
-for (i = n; i > 98; i--)
+for (i = n; i > 97; i--)
 {
-print_number(i);
+digit = i;
+if (is_negative)
+{
+_putchar('-');
+}
+if (digit >= 10)
+{
+_putchar(digit / 10 + '0');
+digit %= 10;
+}
+_putchar(digit + '0');
+if (i != 98)
+{
 _putchar(',');
 _putchar(' ');
 }
 }
-print_number(98);
+}
+_putchar('9');
+_putchar('8');
 _putchar('\n');
-}
-
-/**
- * print_number - prints an integer as a series of digits.
- * @n: the integer to print.
- */
-void print_number(int n)
-{
-if (n < 0)
-{
-_putchar('-');
-n = -n;
-}
-if (n >= 10)
-{
-print_number(n / 10);
-}
-_putchar(n % 10 + '0');
 }
