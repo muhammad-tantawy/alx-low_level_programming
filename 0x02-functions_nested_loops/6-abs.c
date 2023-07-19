@@ -2,6 +2,7 @@
 
 /**
  * _abs - This is to print absolute value
+ * @a: the number to return the absolute of .
  * Return:0
 */
 
@@ -17,6 +18,6 @@ return (0);
 }
 else
 {
-return (a);
+return (a * -1);
 }
 }
