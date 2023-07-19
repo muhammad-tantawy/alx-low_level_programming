@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet*10 - This is to print letters
+ * print_alphabet_x10 - This is to print letters
  * Return:0
 */
 
@@ -11,7 +11,7 @@ char c;
 int i;
 for (i = 0; i < 10; i++)
 {
-c= 'a';
+c = 'a';
 while (c <= 'z')
 {
 _putchar(c);
@@ -19,4 +19,4 @@ c++;
 }
 _putchar('\n');
 }
-}    
+}
