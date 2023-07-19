@@ -8,13 +8,9 @@
 int print_last_digit(int n)
 {
 int last_digit;
-if (n == INT_MIN)
+if (n < 0)
 {
-last_digit = 8;
-}
-else if (n < 0)
-{
-n = -n;
+last_digit = -last_digit;
 }
 last_digit = n % 10;
 _putchar(last_digit + '0');
