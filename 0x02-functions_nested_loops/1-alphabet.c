@@ -3,8 +3,13 @@
  * print_alphabet - This is to print letters
  * Return:0
 */
-int main(void)
+void print_alphabet(void)
 {
-print_alphabet();
-return (0);
+char d = 'a';
+while (d <= 'z')
+{
+_putchar(d);
+d++;
+}
+_putchar('\n');
 }
