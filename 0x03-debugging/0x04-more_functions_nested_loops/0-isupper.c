@@ -1,3 +1,4 @@
+#include"main.h"
 /**
  * main - checks if letter is upper case
  * Return : 0
