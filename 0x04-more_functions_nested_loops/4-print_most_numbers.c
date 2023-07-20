@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints all numbers except 2&4
- * @a: counter
-*/
+ * print_most_numbers - prints all numbers from 0-9 except 2&4
+ * 
+ */
 
 void print_most_numbers(void)
 {
