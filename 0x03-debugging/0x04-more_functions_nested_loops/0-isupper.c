@@ -6,9 +6,9 @@
  * Return : 0
 */
 
-int main (void)
+int _isupper(int c)
 {
-	char c;
+	int c;
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
