@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * main - checks if letter is upper case
+ * Return : 0
+*/
+
+int main (void)
+{
+	char c;
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else if ( c >= 'a' &&  c <= 'z')
+	{
+		return (0);
+	}
+	return (0);
+}
