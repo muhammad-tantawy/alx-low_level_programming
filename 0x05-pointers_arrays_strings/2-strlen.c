@@ -2,8 +2,8 @@
 
 /**
  *_strlen - calculate the size of strings
- *
- * Return : returns lenght
+ *@s:string to calculate its length
+ * Return: returns lenght
  */
 
 int _strlen(char *s)
