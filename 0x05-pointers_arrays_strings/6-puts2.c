@@ -1,5 +1,11 @@
 #include "main.h"
 
+
+/**
+ * puts2 - print every other character
+ * @str: string to manipulate
+ */
+
 void puts2(char *str)
 {
 	int len = 0;
