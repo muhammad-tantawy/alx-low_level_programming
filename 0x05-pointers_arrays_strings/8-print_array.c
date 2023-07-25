@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * print_array - function prints n elements of an array
+ */
+
 void print_array(int *a, int n)
 {
 	int i;
