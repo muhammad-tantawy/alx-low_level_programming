@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * strcpy - function copies from src to dest pointers values
+ * @src:source pointer
+ * @dest:destination pointer
+ * Return:dest
+ */
+
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
