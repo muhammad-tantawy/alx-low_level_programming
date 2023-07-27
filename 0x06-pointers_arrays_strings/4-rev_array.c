@@ -22,5 +22,4 @@ void reverse_array(int *a, int n)
 	{
 		a[i] = b[i];
 	}
-	return (0);
 }
