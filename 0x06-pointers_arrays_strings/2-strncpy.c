@@ -5,6 +5,7 @@
  *@dest: the destinationtext
  *@src: the source text
  *@n: the number of character
+ *Return: returns destination
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -17,4 +18,5 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = src[i];
 		i++;
 	}
+	return (dest);
 }
