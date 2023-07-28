@@ -5,23 +5,23 @@
  *@str: string to be encoded
  *Return:returns coded string
  */
-
-char *leet(char *str)
+char *leet(char *s)
 {
 	int i, j;
-	char leet_table[] = "4433771100";
-	char char_table[] = "aAeEoOtTlL";
 
-	for (i = 0; str[i] != '\0'; i++)
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (str[i] == char_table[j])
+			if (s[i] == a[j])
 			{
-				str[i] = leet_table[j];
-				break;
+				s[i] = b[j];
 			}
 		}
 	}
-	return (str);
+
+	return (s);
 }
