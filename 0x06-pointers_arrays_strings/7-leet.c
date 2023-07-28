@@ -2,7 +2,7 @@
 
 /**
  *leet - encode string into 1337
- *@str: string to be encoded
+ *@s: string to be encoded
  *Return:returns coded string
  */
 char *leet(char *s)
