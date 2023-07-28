@@ -3,7 +3,7 @@
 /**
  *reverse_array - function reverses content of array
  *@a: array to be reversed
- *n: number of elements
+ *@n: number of elements
  *
  */
 
@@ -11,15 +11,14 @@ void reverse_array(int *a, int n)
 
 {
 	int i = 0;
-	int b[n];
+	int b = 0;
 
-	while (i < n)
+	for (i = 0;i < n/2 ;i++)
 	{
-		b[i] = a[n - i - 1];
+		b = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = b;
+
 		i++;
-	}
-	for (i = 0 ; i < n; i++)
-	{
-		a[i] = b[i];
 	}
 }
