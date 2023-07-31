@@ -4,6 +4,7 @@
  * @s:location to be filled
  * @b:byte to be filled by
  * @n:number of bytes
+ * Return:returns modified memory
  */
 char *_memset(char *s, char b, unsigned int n)
 {
