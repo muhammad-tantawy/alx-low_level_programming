@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *_strchr - function to search a string
  *@s: string to search in
@@ -8,6 +9,9 @@
 
 char *_strchr(char *s, char c)
 {
+	char s;
+	char c;
+
 	while (*s != '\0' && *s != c)
 	{
 		s++;
