@@ -6,18 +6,20 @@
  *@c: charcter to search for
  *Return: returns the pointer
  */
-
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0' && *s != c)
-	{
-		s++;
-	}
+		int a;
 
-	if (*s == c)
-	{
-		return (*s);
-	}
-
-	return (NULL);
+		while (1)
+		{
+			a = *s++;
+			if (a == c)
+			{
+				return (s - 1);
+			}
+			if (a == 0)
+			{
+				return (NULL);
+			}
+		}
 }
