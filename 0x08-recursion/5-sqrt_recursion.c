@@ -3,6 +3,7 @@
 /**
  * helper - function assists to find the square root
  *@i:counter used to add up to the root
+ *@n:the number to find its root
  *Return: the next iteration
  */
 
