@@ -3,7 +3,7 @@
 /**
  * factorial - functions returns factorial of n
  * @n:number to calculate the factorial for
- * Reurn: the factorial of n
+ * Return: the factorial of n
  */
 
 int factorial(int n)
