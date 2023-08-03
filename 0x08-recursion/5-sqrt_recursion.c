@@ -5,7 +5,7 @@
  * _sqrt_recursion - function retruns square root of a number
  * @n: number to calculate its route
  * Return: returns the square root
- *helper - function assists to find the square root
+ * helper - function assists to find the square root
  *@i:counter used to add up to the root
  */
 
