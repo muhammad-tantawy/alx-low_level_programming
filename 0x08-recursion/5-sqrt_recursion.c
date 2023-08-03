@@ -7,14 +7,8 @@
  * Return: returns the square root
  */
 
-int _sqrt_recursion(int n)
+int helper(int n, int i)
 {
-	static int i = 0;
-	
-	if (n < 0)
-	{
-		return (-1);
-	}
 	if (i * i == n)
 	{
 		return (i);
@@ -23,7 +17,16 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	i++;
 
-	return (_sqrt_recursion(n));
+	return (helper(n, i + 1));
 }
+
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+	{
+		return (-1);
+	}
+	return (helper(n, 0));
+}
+
