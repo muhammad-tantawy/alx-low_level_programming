@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stype.h>
+#include <ctype.h>
 
 /**
  *main - function to add 2 positive numbers
@@ -20,14 +20,14 @@ int main(int argc, char *argv[])
 		if (argc == 1)
 		{
 			printf("0\n");
-			return (0);
+
 		}
 
 		if (isdigit(argv[i]))
 		{
 			sum = atoi(argv[1]) + atoi(argv[2]);
+			printf("%d\n", sum);
 
-			return (0);
 		}
 
 		else
@@ -36,4 +36,6 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 	}
+
+	return (0);
 }
