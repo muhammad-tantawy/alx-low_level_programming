@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  *main - function multiplies 2 numbers
  *@argc:number of arguments
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	sum = argv[0] * argv[1];
-	print("%d\n", sum);
+	sum = atoi(argv[0]) * atoi( argv[1]);
+	printf("%d\n", sum);
 	return (0);
 }
