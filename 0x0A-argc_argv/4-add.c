@@ -9,32 +9,33 @@
  *@argv: content of arguments
  *Return: 0 if succcess and 1 if symblos are in the argument
  */
-
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i = 1;
+	int i;
+	int j;
+	char *arg;
 
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
 
-	if (isdigit(argv[i]))
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc - 1; i++)
+		arg = argv[i];
+		for (j = 0; arg[j] != '\0'; j++)
 		{
-
-		sum = sum + atoi(argv[i]);
-		printf("%d\n", sum);
-
+			if (!isdigit(arg[j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+		sum += atoi(arg);
+		printf("%d\n", sum);
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
-
 	return (0);
 }
+
