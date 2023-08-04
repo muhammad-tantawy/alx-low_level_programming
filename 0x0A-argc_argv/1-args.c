@@ -6,7 +6,7 @@
  * main - function prints number of arguments added
  * @argc: number of arguments
  * @argv: content of arguments
- * Retun: returns 0
+ * Return: returns 0
  */
 
 int main(int argc, char *argv[])
