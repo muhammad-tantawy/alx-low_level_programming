@@ -11,8 +11,8 @@
 int main(int argc, char *argv[])
 {
 	int sum;
-
-	if (argc != 2)
+	printf ("%d\n", argc);
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
