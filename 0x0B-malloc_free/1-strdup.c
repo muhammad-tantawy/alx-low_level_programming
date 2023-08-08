@@ -7,6 +7,10 @@ char *_strdup(char *str)
 	int count = 0;
 	int i;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (str[count] != '\0')
 	{
 		count++;
@@ -18,7 +22,7 @@ char *_strdup(char *str)
 		dup[i] = str[i];
 	}
 
-	if (dup == NULL || str == NULL)
+	if (dup == NULL)
 	{
 		return (NULL);
 	}
