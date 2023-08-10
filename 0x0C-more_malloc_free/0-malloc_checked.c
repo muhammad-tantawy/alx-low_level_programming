@@ -9,7 +9,7 @@
 void *malloc_checked(unsigned int b)
 
 {
-	unsigned int *array;
+	void *array;
 
 	array = malloc(b);
 
@@ -17,5 +17,5 @@ void *malloc_checked(unsigned int b)
 	{
 		exit(98);
 	}
-	exit(array);
+	return(array);
 }
