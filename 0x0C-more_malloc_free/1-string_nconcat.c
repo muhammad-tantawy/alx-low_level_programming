@@ -23,11 +23,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	while (count1 != '\n')
+	while (s1[count1] != '\n')
 	{
 		count1++;
 	}
-	while (count2 != '\n')
+	while (s2[count2] != '\n')
 	{
 		count2++;
 	}
@@ -41,6 +41,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (arrays == NULL)
 	{
 		return (NULL);
+	}
+	for (x = 0; x < count1; x++ )
+	{
+		arrays[x] = s1[x];
+	}
+	for (y = x; y < n + x + 1; y++)
+	{
+		arrays[y] = s2[y - x];
 	}
 	return (arrays);
 }
