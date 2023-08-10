@@ -4,6 +4,7 @@
 /**
  * malloc_checked - function allocates memory using malloc
  * @b: the size requested of memory
+ * Retuen: returns pointer to array.
  */
 
 void *malloc_checked(unsigned int b)
