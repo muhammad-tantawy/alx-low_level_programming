@@ -4,6 +4,7 @@
  * string_nconcat - concatenates first string with n charcters second string
  *@s1: first string
  *@s2: second string
+ *@n: number of elements from s2
  *Return: returns pointer to the newely created array
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
