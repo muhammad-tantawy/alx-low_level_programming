@@ -18,11 +18,9 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	while (elenum <= max)
-	{
-		elenum++;
-	}
-	arr = malloc(elenum * sizeof(min));
+
+	elenum = max - min + 1;
+	arr = malloc(elenum * sizeof(int));
 	if (arr == NULL)
 	{
 		return (NULL);
