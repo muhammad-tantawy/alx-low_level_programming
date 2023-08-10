@@ -12,16 +12,17 @@ int *array_range(int min, int max)
 {
 	int *arr;
 	int elenum = min;
+	int x;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	while (min <= max)
+	while (elenum <= max)
 	{
 		elenum++;
 	}
-	arr = malloc(elenum);
+	arr = malloc(elenum * sizeof(min));
 	if (arr == NULL)
 	{
 		return (NULL);
