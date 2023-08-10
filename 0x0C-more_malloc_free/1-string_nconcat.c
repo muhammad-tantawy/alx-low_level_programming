@@ -47,9 +47,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		arrays[x] = s1[x];
 	}
-	for (y = x; y < n + x + 1; y++)
+	for (y = x; y < n + x ; y++)
 	{
 		arrays[y] = s2[y - x];
 	}
+	arrays[n + count1 ] = '\0';
 	return (arrays);
 }
