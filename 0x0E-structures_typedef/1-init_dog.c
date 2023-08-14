@@ -1,7 +1,8 @@
 #include "dog.h"
-
+#include <stdlib.h>
 /**
  * init_dog - used to initialize the dog struct
+ * @d: address of the struct
  * @name: name of the dog struct
  * @age: member age of the struct
  * @owner: owner member of the struct
