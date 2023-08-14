@@ -1,0 +1,1 @@
+checking structs and typedef
