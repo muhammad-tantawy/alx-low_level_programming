@@ -3,8 +3,8 @@
 #include "dog.h"
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *namecp = NULL;
-	char *ownercp = NULL;
+	char *namecp;
+	char *ownercp;
 	int i = 0, j = 0, k = 0, l = 0;
 	dog_t *dog;
 
@@ -36,6 +36,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free (dog);
 		return (NULL);
 	}
+	ownercp = malloc(sizeof(char) * (j + 1));
+	namecp = malloc(sizeof(char) * (i + 1));
 	for (k = 0; k < i; k++)
 	{
 		ownercp[k] = owner[k];
