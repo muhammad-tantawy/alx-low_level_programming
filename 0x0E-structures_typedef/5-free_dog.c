@@ -3,7 +3,7 @@
 
 /**
  * free_dog - function frees memory of teh allocated dogs
- * @ dog_t *d : address of the allocated struct called d
+ * @d : address of the allocated struct called d
  */
 
 void free_dog(dog_t *d)
