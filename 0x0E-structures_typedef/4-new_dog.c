@@ -21,18 +21,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		j++;
 	}
-	dog->name = malloc(sizeof(char) * (i+1));
+	dog->name = malloc(sizeof(char) * (i + 1));
 	if (dog->name == NULL)
 	{
 		return (NULL);
-	
+
 	}
-	dog->owner = malloc(sizeof(char) * (j+1));
+	dog->owner = malloc(sizeof(char) * (j + 1));
 	if (dog->owner == NULL)
 	{
 		return (NULL);
 	}
-	for (k = 0; k <i; k++ )
+	for (k = 0; k < i; k++)
 	{
 		ownercp[k] = owner[k];
 	}
