@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - function prints current file location
+ */
 int main(void)
 {
 
