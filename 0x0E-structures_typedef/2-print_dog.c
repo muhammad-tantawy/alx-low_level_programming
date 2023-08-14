@@ -30,5 +30,4 @@ void print_dog(struct dog *d)
 		printf("Age: %f\n", d->age);
 
 	}
-	return;
 }
