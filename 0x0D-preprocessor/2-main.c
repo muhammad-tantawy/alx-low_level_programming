@@ -4,6 +4,6 @@
 int main()
 {
 
-	printf("_FILE_");
+	printf("__FILE__");
 }
 
