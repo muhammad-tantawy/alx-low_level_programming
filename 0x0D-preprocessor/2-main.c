@@ -4,7 +4,7 @@
 int main()
 {
 
-	printf("__FILE__");
+	printf(__FILE__);
 	return (0);
 }
 
