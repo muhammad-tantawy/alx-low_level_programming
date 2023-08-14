@@ -6,15 +6,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *namecp;
 	char *ownercp;
 	int i = 0, j = 0;
+	dog_t *dog;
 
 	while (name[i] != '\0')
 	{
-		namecp[i] = name[i];
 		i++;
 	}
 	while (owner[j] != '\0')
 	{
-		ownercp[j] = owner[j];
 		j++;
 	}
 	
