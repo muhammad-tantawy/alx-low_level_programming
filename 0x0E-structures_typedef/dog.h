@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * dog - structure used to define new struc dog
+ *struct dog - structure used to define new struc dog
  * @name: pointer to char
  * @age: float in struc
  * @owner: pointer to char
