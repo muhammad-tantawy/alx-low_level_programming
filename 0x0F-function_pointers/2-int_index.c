@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * int_indes - function returns the index of the found number in the array
+ * int_index - function returns the index of the found number in the array
  * @array: array to be checked
  * @size: size of the array
  * @cmp: function used to compare
