@@ -2,6 +2,7 @@
 #include <stdlib.h>
 /**
  * array_iterator - function executes other fumction of array
+ * @array: arrya to be processed
  * @size:size of the array
  * @action: pointer to the function to be executed
  */
