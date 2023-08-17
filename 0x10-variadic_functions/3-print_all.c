@@ -1,16 +1,58 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - function prints all input based on format passed
- * @format: the type of data user wants to print
+ * print_caar - prints character
+ * @args: the input from user
+ */
+
+void print_char(va_list args)
+{
+	char c = va_arg(args, int);
+
+	printf("%c", c);
+}
+
+/**
+ * print_int - prints integer
+ * @args: input passed by user
+ */
+
+void print_int(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+/**
+ * print_float - prints float input from user
+ * @args:input from user
+ */
+void print_float(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+
+/**
+ * print_string - helper finction to print strings
+ * @args:input to the function
+ */
+void print_string(va_list args)
+{
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
+}
+/**
+ * print_all - function prints input from user based on format passed
+ * @format: character to specify which type of data to print
  */
 
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *str;
 	int i = 0;
-	char c;
 	int done = 0;
 
 	va_start(args, format);
@@ -20,37 +62,27 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				c = va_arg(args, int);
-				printf("%c", c);
+				print_char(args);
 				done = 1;
 				break;
 			case 'i':
-				printf("%d", va_arg(args, int));
+				print_int(args);
 				done = 1;
 				break;
 			case 'f':
-				printf("%f", va_arg(args, double));
+				print_float(args);
 				done = 1;
 				break;
 			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
-				{
-					printf("(nil)");
-				}
-				else
-				{
-					printf("%s", str);
-				}
+				print_string(args);
 				done = 1;
 				break;
 		}
-		if (done && format[i + 1])
-		{
-			printf(", ");
-		}
-		i++;
+	if (done && format[i + 1])
+		printf(", ");
+	i++;
 	}
+
 	printf("\n");
 	va_end(args);
 }
