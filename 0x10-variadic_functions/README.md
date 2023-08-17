@@ -1,0 +1,1 @@
+checking variadic funcs
