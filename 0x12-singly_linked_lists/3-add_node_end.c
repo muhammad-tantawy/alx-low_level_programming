@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * add_node_end - func adds a node to the beginning of the linked list
  * @head: address of the head
