@@ -7,23 +7,23 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t node;
+	list_t *node;
 	char *dup;
 	unsigned int len2 = 0;
 	list_t *temp = NULL;
 
 	node = malloc(sizeof(list_t));
-	if (node == NULL);
+	if (node == NULL)
 		return (NULL);
 	dup = strdup(str);
 	if (dup == NULL)
 		return (NULL);
-	while (dup[len2] != "\0")
+	while (dup[len2] != '\0')
 		len2++;
 	temp = *head;
-	while (temp != NULL)
+	while (temp->next != NULL)
 	{
-		temp = node->next;
+		temp = temp->next;
 	}
 	node->str = dup;
 	node->len = len2;
