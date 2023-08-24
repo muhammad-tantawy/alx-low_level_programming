@@ -3,8 +3,8 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	char *dup;
-	struct list_t *node;
-	unsigned int len2 = 0;
+	list_t *node;
+	size_t len2 = 0;
 
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
