@@ -20,6 +20,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	while (dup[len2])
 		len2++;
+	if (*head == NULL)
+	{
+		*head = node;
+		return (node);
+	}
 	temp = *head;
 	while (temp->next != NULL)
 	{
