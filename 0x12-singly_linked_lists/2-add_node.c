@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * add_node - function adds anode at the beginning
+ * @head:pointer to the address pointer of the node
+ * @str: string of the new node to be added.
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	char *dup;
