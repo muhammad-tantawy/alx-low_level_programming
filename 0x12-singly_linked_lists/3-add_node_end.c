@@ -16,6 +16,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!node)
 		return (NULL);
 	dup = strdup(str);
+	if (!dup)
+		return (NULL);
 	while (dup[len2])
 		len2++;
 	node->str = dup;
