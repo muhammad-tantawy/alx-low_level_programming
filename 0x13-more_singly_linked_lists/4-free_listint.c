@@ -1,5 +1,9 @@
 #include "lists.h"
 
+/**
+ * free_listint - func frees a list
+ * @head: the head pointer of the list to free
+ */
 void free_listint(listint_t *head)
 
 {
@@ -9,6 +13,6 @@ void free_listint(listint_t *head)
 	{
 		temp = head;
 		head = head->next;
-		free (temp);
+		free(temp);
 	}
 }
