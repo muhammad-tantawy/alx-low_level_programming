@@ -1,5 +1,9 @@
 #include "lists.h"
-
+/**
+ * listint_len - function calculates length of a list
+ * @h: header to the list
+ * Return: returns the number of elements
+ */
 
 size_t listint_len(const listint_t *h)
 {
