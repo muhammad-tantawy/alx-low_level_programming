@@ -3,7 +3,7 @@
 /**
  * delete_nodeint_at_index - func deletes a node at position n
  * @head: head pointer of the list
- * @indes: the position to delete its node
+ * @index: the position to delete its node
  * Return: returns 1 if success or -1 if failed.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
