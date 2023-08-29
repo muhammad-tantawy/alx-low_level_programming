@@ -1,6 +1,11 @@
 #include "lists.h"
 
-
+/**
+ * delete_nodeint_at_index - func deletes a node at position n
+ * @head: head pointer of the list
+ * @indes: the position to delete its node
+ * Return: returns 1 if success or -1 if failed.
+ */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 {
@@ -8,20 +13,28 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int count;
 	listint_t *after = *head;
 	listint_t *pre = *head;
-
-	for (count = 0; after && count <= index; count++)
+	
+	if (head == NULL || *head == NULL)
+		return (-1);	
+	if (index == 0)
 	{
-		after = after->next;
+		*head = after->next;
+		free(after);
+		return (1);
 	}
-
-	for (count = 0; pre && count < index; count++)
+	else
 	{
-		if (count == index - 1)
-			{
-				pre->next = temp;
-			}
-		else
+		for (count = 0; pre && count < index; count++)
+		{
+			if (pre == NULL)
+				return (-1);
 			pre = pre->next;
+		}
+		if (after == NULL)
+			return (-1);
+		after = pre->next;
+		pre->next = after->next;
+		free(after);
 
 	}
 }
