@@ -24,13 +24,13 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	else
 	{
-		for (count = 0; pre && count < index; count++)
+		for (count = 0; pre && count < index - 1; count++)
 		{
 			if (pre == NULL)
 				return (-1);
 			pre = pre->next;
 		}
-		if (after == NULL)
+		if (pre == NULL || pre->next == NULL)
 			return (-1);
 		after = pre->next;
 		pre->next = after->next;
