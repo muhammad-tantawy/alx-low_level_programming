@@ -1,6 +1,10 @@
 #include "main.h"
 
-
+/**
+ * binary_to_uint - func converts binary to unsigned int
+ * @b: the string containing the numbers to convert
+ * Return: the converted number
+ */
 
 unsigned int binary_to_uint(const char *b)
 {
