@@ -3,7 +3,7 @@
 /**
  * print_binary - func prints binary representation of a number
  * @n : the number we operate on
- */ 
+ */
 
 void print_binary(unsigned long int n)
 {
