@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * get_bit - func recovers the bit needed at position index
