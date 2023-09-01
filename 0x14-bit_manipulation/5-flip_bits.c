@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *flip_bits - func shows how many bits needed to flip to switch to the other number
+ *flip_bits - func shows how many bits needed to switch to the other num
  *@n: the first number to be switched
  *@m: the number to be switched to
  *Return: returns the number of bits
