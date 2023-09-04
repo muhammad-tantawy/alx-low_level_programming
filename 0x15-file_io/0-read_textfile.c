@@ -14,11 +14,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *fp;
 	size_t nread;
 	if (filename == NULL)
-		return 0;
+		return (0);
 
 	fp = fopen(filename, "r");
 	if (fp == NULL)
-		return 0;
+		return (0);
        	nread = fread(buf, 1, letters, fp);
 	fclose(fp);
 
