@@ -1,28 +1,48 @@
 #include "main.h"
-
-
 /**
- * read_textfile - func readstext files and prints to the POSIX
- * @filename: the name of the file
- * @letters: letters numbers to be read
- * Return: returns actual number of letters
+ * read_textfile - function reads from a text file
+ * @filename:filename to be worked on
+ * @letters:number of letters that will be read
+ * Return:number of letters actually read
  */
+
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	int fd;
+	ssize_t nread, nwritten;
+	char *buffer;
 
-	char buf[letters];
-	FILE *fp;
-	size_t nread;
 	if (filename == NULL)
+	return (0);
+
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
 
-	fp = fopen(filename, "r");
-	if (fp == NULL)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+	{
+		close(fd);
 		return (0);
-       	nread = fread(buf, 1, letters, fp);
-	fclose(fp);
+	}
 
-	write(STDOUT_FILENO, buf, nread);
+	nread = read(fd, buffer, letters);
+	if (nread == -1)
+	{
+	free(buffer);
+	close(fd);
+	return (0);
+	}
 
-	return (nread);
+	nwritten = write(STDOUT_FILENO, buffer, nread);
+	if (nwritten == -1 || nwritten != nread)
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
+	free(buffer);
+	close(fd);
+	return (nwritten);
 }
