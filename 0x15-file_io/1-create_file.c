@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * create_file - func creates a file 
+ * create_file - func creates a file
  * @filename: file name to be created
  * @text_content:string to be entered
  * Return:1 success or -1
- *
  */
 
 int create_file(const char *filename, char *text_content)
