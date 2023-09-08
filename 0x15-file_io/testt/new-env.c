@@ -20,3 +20,10 @@ char *_getenv(const char *name)
         i++;
     } 
 }
+int main(void)
+{
+    char *name = "HOME";
+    char *value = _getenv(name);
+    printf("%s=%s\n", name, value);
+    return (0);
+}
