@@ -9,31 +9,29 @@ char cmd[MAX_CMD_LEN];
     int i = 0;
 
     if (argc > 1) {
-        // Use command line arguments
         if ((pid = fork()) < 0) {
             printf("Fork error\n");
             exit(1);
-        } else if (pid == 0) {  // child process
+        } else if (pid == 0) { 
             if (execve(argv[1], &argv[1], env) < 0) {
                 printf("Exec error\n");
                 exit(1);
             }
-        } else {  // parent process
+        } else { 
             while (wait(&status) != pid);
         }
     } else {
-        // Interactive mode
-        while (1) {
-            printf(">simple-shell ");
 
-            // Get the command from the user
+        while (1) {
+            printf(">simshell ");
+
             if (fgets(cmd, sizeof(cmd), stdin) == NULL) {
                 break;
             }
 
-            cmd[my_strlen(cmd) - 1] = '\0';  // remove newline at the end
+            cmd[my_strlen(cmd) - 1] = '\0';
 
-            // split command into arguments
+
             int i = 0;
             args[i] = strtok(cmd, " ");
             while (args[i] != NULL) {
@@ -53,7 +51,7 @@ char cmd[MAX_CMD_LEN];
             {
                 if (execve(args[0], args, env) < 0) 
                 {
-                    printf("Please enter full path such as \"/bin/ls\" or pipe it in non-interactive\n");
+                    printf("%s: not found\n",args[0]);
                     exit(1);
                 }
             } 
