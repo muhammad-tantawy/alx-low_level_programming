@@ -17,6 +17,7 @@ int main(void)
         if ( number_of_cycles %2 ==0)
             base = base + 50;
         enter = base + enter;
+        printf("base is %f\n", base);
         printf("%f\n", enter);
         number_of_cycles++;
     }
