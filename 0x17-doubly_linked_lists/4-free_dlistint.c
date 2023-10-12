@@ -2,6 +2,7 @@
 /**
  * free_dlistint - func frees the double linked list
  * @head: the head pointer
+ * Return: no return
  */
 
 void free_dlistint(dlistint_t *head)
@@ -11,8 +12,7 @@ void free_dlistint(dlistint_t *head)
 	if (head != NULL)
 		while (head->prev != NULL)
 			head = head->prev;
-	tmp = head;
-	while (tmp != NULL)
+	while ((tmp = head) != NULL)
 	{
 		head = head->next;
 		free(tmp);
